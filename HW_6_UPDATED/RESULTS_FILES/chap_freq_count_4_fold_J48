@@ -1,0 +1,87 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     bookauthor
+Instances:    230
+Attributes:   501
+              [list of attributes omitted]
+Test mode:    4-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+reckon <= 0
+|   cylinder <= 0
+|   |   machine <= 0
+|   |   |   maybe <= 0
+|   |   |   |   streets <= 0
+|   |   |   |   |   water <= 2
+|   |   |   |   |   |   lightning <= 0
+|   |   |   |   |   |   |   outside <= 0
+|   |   |   |   |   |   |   |   wouldn <= 0
+|   |   |   |   |   |   |   |   |   shoulder <= 0
+|   |   |   |   |   |   |   |   |   |   roads <= 0
+|   |   |   |   |   |   |   |   |   |   |   village <= 0: austen (70.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   village > 0
+|   |   |   |   |   |   |   |   |   |   |   |   indeed <= 0: twain (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   indeed > 0: austen (2.0)
+|   |   |   |   |   |   |   |   |   |   roads > 0: dickens (3.0/1.0)
+|   |   |   |   |   |   |   |   |   shoulder > 0: dickens (2.0)
+|   |   |   |   |   |   |   |   wouldn > 0: dickens (4.0/1.0)
+|   |   |   |   |   |   |   outside > 0
+|   |   |   |   |   |   |   |   question <= 0: twain (2.0/1.0)
+|   |   |   |   |   |   |   |   question > 0: dickens (7.0)
+|   |   |   |   |   |   lightning > 0: twain (3.0)
+|   |   |   |   |   water > 2
+|   |   |   |   |   |   suddenly <= 0: twain (2.0)
+|   |   |   |   |   |   suddenly > 0: wells (3.0)
+|   |   |   |   streets > 0
+|   |   |   |   |   visit <= 0: dickens (32.0)
+|   |   |   |   |   visit > 0: austen (2.0/1.0)
+|   |   |   maybe > 0: twain (9.0/1.0)
+|   |   machine > 0
+|   |   |   pleasure <= 0: wells (6.0)
+|   |   |   pleasure > 0: dickens (2.0/1.0)
+|   cylinder > 0: wells (17.0/1.0)
+reckon > 0
+|   happiness <= 1: twain (60.0/1.0)
+|   happiness > 1: austen (2.0)
+
+Number of Leaves  : 	19
+
+Size of the tree : 	37
+
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         190               82.6087 %
+Incorrectly Classified Instances        40               17.3913 %
+Kappa statistic                          0.7565
+Mean absolute error                      0.1009
+Root mean squared error                  0.2895
+Relative absolute error                 28.0886 %
+Root relative squared error             68.3392 %
+Total Number of Instances              230     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.867    0.116    0.783      0.867    0.823      0.733    0.882     0.760     austen
+                 0.760    0.056    0.792      0.760    0.776      0.715    0.847     0.668     dickens
+                 0.859    0.053    0.893      0.859    0.876      0.814    0.893     0.822     twain
+                 0.741    0.020    0.833      0.741    0.784      0.759    0.843     0.611     wells
+Weighted Avg.    0.826    0.070    0.828      0.826    0.826      0.760    0.873     0.743     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 65  5  5  0 |  a = austen
+  8 38  2  2 |  b = dickens
+  7  2 67  2 |  c = twain
+  3  3  1 20 |  d = wells
+

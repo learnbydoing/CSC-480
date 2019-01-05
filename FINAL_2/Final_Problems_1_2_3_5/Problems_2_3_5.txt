@@ -1,0 +1,120 @@
+
+
+
+Problem 2
+
+(6 points) Consider the following first-order predicate calculus statements, which have already been written in Skolemized clause form.
+
+Write all pairs of clauses below that can resolve (there are 6 of them).   If a pair resolves, give the resulting substitution given by unification along with the resolution.  Note:  I am not asking you to give a complete proof, just the result of one resolution at a time. 
+
+
+a. inst(sk0(?a), human) v mortal(sk0(?a))
+b. ~inst(Socrates, human)
+c. ~mortal(?b)
+d. ~inst(?c,?d)
+e. inst(Socrates, ?e)
+f. ~inst(?f, human) v ~married(spouse-of(?f)) v single(?f)
+g. married(spouse-of(Socrates))
+
+
+
+a. inst(sk(?a), human) v mortal(sk0(?a))
+f. ~inst(?f, human) v ~married(spouse-of(?f)) v single(?f)
+
+resolve to:
+
+(h) mortal(sk0(?a)) v ~married(spouse-of(sk0(?a)) v single(sk0(?a))  // ?f=sk0(?a)
+
+h. mortal(sk0(?a)) v ~married(spouse-of(sk0(?a)) v single(sk0(?a))
+g. married(spouse-of(Socrates))
+
+resolve to:
+
+(i) mortal(Socrates) v single(Socrates)  //sk0(?a)=Socrates
+
+i. mortal(Socrates) v single(Socrates) 
+c. ~mortal(?b)
+
+resolve to:
+
+(j) single(Socrates) //?b=Socrates
+
+
+a. inst(sk(?a), human) v mortal(sk0(?a))
+b. ~inst(Socrates, human)
+
+d. ~inst(?c,?d)
+e. inst(Socrates, ?e)
+
+resolve to:
+
+(k) Box  //?c=Socrates; ?d=?e
+
+
+a. inst(sk0(?a), human) v mortal(sk0(?a))
+b. ~inst(Socrates, human)
+
+resolve to:
+
+(l) mortal(Socrates)  //sk0(?a)=Socrates (from above)
+
+
+l. mortal(Socrates)  
+c. ~mortal(?b)
+
+resolve to:
+
+(m) Box //?b=Socrates
+
+
+Problem 3
+(3 points) Say we want to prove that unicorns don’t exist.  Here is the theorem:
+
+A x ~unicorn(x)
+
+If we would like to prove that unicorns don’t exiist using contradiction and resolution, what is the proper negation of this theorem?  Write your answer in clause form.  Note:  You are not writing a proof in this problem, but merely stating the negation of what you would like to prove
+
+
+Ax ~unicorn(x)
+
+Negative:
+
+~Ax ~unicorn(x)
+Ex ~ ~ unicorn(x)
+Ex unicorn(x)
+unicorn(sk0)  //Existential quantifier and 1 variable so use skolem term
+
+
+
+Problem 5
+
+(6 points) Machine learning
+
+a. What is the difference between supervised and unsupervised learning?
+
+Supervised learning - agent is given set of examples (i.e., training set) and told which are members of category and which are not. Based on this, the agent learns to classify new examples it has been given
+
+Unsupervised learning - agent is only given input without any feedback.  For example, the agent may make recommendations for subsequent purchases based on monitoring a person’s shopping habits
+
+
+b. List at least 3 metrics which are used to evaluate supervised learning algorithms.
+
+Precision
+Recall
+F Measure
+
+tp = true positive
+fp = false positive
+fn = false negative
+tn = true negative
+
+Precision = tp / (tp + fp)
+
+Recall = tp / (tp + fn)
+
+F measure = (2 * Recall * Precision ) / (Recall + Precision)
+
+
+c. Explain what cross-validation is.
+
+Cross-validation is a technique to evaluate ML models by training them on subsets of input data.  The data is split into k subsets (called folds) and the model is trained on (k-1) of the subsets and tested on the subset that is not used for training.   This is repeated k times, using a different subset for testing each time. For example, for 4-fold cross validation, the data is split into 4 subsets and 3 of these are used for training and one is used for testing. This is repeated 4 times, using a different subset for testing each time.

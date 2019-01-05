@@ -1,0 +1,261 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 Problem #1: Blocks World Output - Start != Goal
+\fs24 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs22 \cf0 Enter a start state as a comma separated strings, NO SPACES.  For example, ro,b or rbo or r,b,o\
+Enter start state: r,o,b\
+Enter goal state: \cf2 rbo\cf0 \
+\
+\
+***** Blocks World - Depth First Search *******\
+current state: [r,o,b,]\
+current state: [ro,b,]\
+current state: [bro,]\
+current state: [rb,o,]\
+current state: [orb,]\
+current state: [br,o,]\
+current state: [obr,]\
+current state: [ob,r,]\
+current state: [rob,]\
+current state: [bo,r,]\
+goal state: [rbo,]\
+Number of states visited: 10\
+\
+\
+***** Blocks World - Breadth First Search *******\
+current state: [r,o,b,]\
+current state: [bo,r,]\
+current state: [or,b,]\
+current state: [ob,r,]\
+current state: [rb,o,]\
+current state: [ro,b,]\
+current state: [br,o,]\
+goal state: [rbo,]\
+Number of states visited: 7\
+\
+\
+***** Blocks World - Best First Search *******\
+current state: [r,o,b,]\
+Sorted states\
+[rb,o,]\
+[bo,r,]\
+[or,b,]\
+[ob,r,]\
+[br,o,]\
+[ro,b,]\
+current state: [ro,b,]\
+Sorted states\
+[rb,o,]\
+[bo,r,]\
+[bro,]\
+[r,o,b,]\
+[or,b,]\
+[ob,r,]\
+[br,o,]\
+current state: [br,o,]\
+Sorted states\
+[rb,o,]\
+[bo,r,]\
+[bro,]\
+[r,o,b,]\
+[obr,]\
+[or,b,]\
+[ob,r,]\
+current state: [ob,r,]\
+Sorted states\
+[rb,o,]\
+[bo,r,]\
+[rob,]\
+[bro,]\
+[r,o,b,]\
+[obr,]\
+[or,b,]\
+current state: [or,b,]\
+Sorted states\
+[rb,o,]\
+[bo,r,]\
+[rob,]\
+[bro,]\
+[r,o,b,]\
+[obr,]\
+[bor,]\
+current state: [bor,]\
+Sorted states\
+[rb,o,]\
+[bo,r,]\
+[rob,]\
+[bro,]\
+[r,o,b,]\
+[obr,]\
+current state: [obr,]\
+Sorted states\
+[rb,o,]\
+[bo,r,]\
+[rob,]\
+[bro,]\
+[r,o,b,]\
+current state: [bro,]\
+Sorted states\
+[rb,o,]\
+[bo,r,]\
+[rob,]\
+current state: [rob,]\
+Sorted states\
+[rb,o,]\
+[bo,r,]\
+current state: [bo,r,]\
+Sorted states\
+[rbo,]\
+[rb,o,]\
+current state: [rb,o,]\
+Sorted states\
+[rbo,]\
+[orb,]\
+current state: [orb,]\
+Sorted states\
+[rbo,]\
+goal state: [rbo,]\
+Number of states visited: 12
+\f0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs36 \cf0 Problem #1: Blocks World Output - Start != Goal\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs22 \cf0 Enter a start state as a comma separated strings, NO SPACES.  For example, ro,b or rbo or r,b,o\
+Enter start state: b,o,r\
+Enter goal state: \cf2 o,r,b\cf0 \
+\
+\
+***** Blocks World - Depth First Search *******\
+goal state: [o,b,r,]\
+Number of states visited: 0\
+\
+\
+***** Blocks World - Breadth First Search *******\
+goal state: [o,b,r,]\
+Number of states visited: 0\
+\
+\
+***** Blocks World - Best First Search *******\
+goal state: [o,b,r,]\
+Number of states visited: 0
+\f0\fs36 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Problem #2 - Manhattan Distance vs Original Output\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs22 \cf0 Manhattan Distance\
+\
+,dfs,bfs,best\
+1,1400,2,1\
+2,1001,4,2\
+3,2000,13,3\
+4,2000,26,4\
+5,1601,45,5\
+6,1743,73,6\
+7,2000,141,32\
+8,1800,254,53\
+9,2000,381,82\
+10,2000,635,52\
+\
+Original Evaluation Method:\
+\
+,dfs,bfs,best\
+1,1000,1,1\
+2,1800,4,2\
+3,1800,13,3\
+4,1981,27,5\
+5,1601,45,6\
+6,2000,77,50\
+7,1963,142,258\
+8,2000,183,399\
+9,1836,358,527\
+10,2000,588,414
+\f0\fs36 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+Problem #1: Jealous Agents Output\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs22 \cf0 ******** Jealous Agents - Depth First Search *******\
+current state: \{A3,C1,C3,A2,C2,A1,\},\{\},0\
+current state: \{A1,C3,A2,A3,C1,\},\{C2,\},1\
+current state: \{C3,A2,C2,A3,A1,\},\{C1,\},1\
+current state: \{A1,C3,A3,C1,\},\{C2,A2,\},1\
+current state: \{A1,C3,A2,A3,C1,\},\{C2,\},0\
+current state: \{A3,C1,A2,A1,\},\{C3,C2,\},1\
+current state: \{C2,A3,C1,A2,A1,\},\{C3,\},0\
+current state: \{A2,C2,A3,A1,\},\{C3,C1,\},1\
+current state: \{C3,A2,C2,A3,A1,\},\{C1,\},0\
+current state: \{C3,C2,A2,A3,\},\{A1,C1,\},1\
+current state: \{A1,C3,A2,A3,\},\{C2,C1,\},1\
+current state: \{A1,A2,A3,\},\{C3,C2,C1,\},1\
+current state: \{A1,C3,A2,A3,\},\{C2,C1,\},0\
+current state: \{C3,A3,\},\{A1,C2,A2,C1,\},1\
+current state: \{A1,C3,A3,C1,\},\{C2,A2,\},0\
+current state: \{C1,A1,\},\{C3,C2,A2,A3,\},1\
+current state: \{A2,C2,C1,A1,\},\{C3,A3,\},0\
+current state: \{C2,C1,\},\{C3,A2,A3,A1,\},1\
+current state: \{C3,C2,C1,\},\{A1,A2,A3,\},0\
+current state: \{C2,\},\{A1,C3,C1,A2,A3,\},1\
+current state: \{C2,C1,\},\{A3,C3,A2,A1,\},0\
+goal state: \{\},\{A3,C1,C3,C2,A2,A1,\},1\
+Number of states visited: 21\
+\
+\
+******** Jealout Agents - Breadth First Search *******\
+current state: \{A3,C1,C3,A2,C2,A1,\},\{\},0\
+current state: \{A1,C2,A2,C1,\},\{C3,A3,\},1\
+current state: \{C3,A2,A3,A1,\},\{C2,C1,\},1\
+current state: \{A1,A2,A3,C1,\},\{C3,C2,\},1\
+current state: \{A1,A2,C2,A3,C1,\},\{C3,\},1\
+current state: \{A1,C3,A2,A3,C1,\},\{C2,\},1\
+current state: \{A2,C2,A3,A1,\},\{C3,C1,\},1\
+current state: \{C3,A2,C2,A3,\},\{C1,A1,\},1\
+current state: \{A1,C3,A3,C1,\},\{C2,A2,\},1\
+current state: \{C3,A2,C2,A3,A1,\},\{C1,\},1\
+current state: \{A1,A3,C2,A2,C1,\},\{C3,\},0\
+current state: \{C3,A2,C2,A3,A1,\},\{C1,\},0\
+current state: \{C3,A2,C1,A3,A1,\},\{C2,\},0\
+current state: \{A2,A3,A1,\},\{C3,C2,C1,\},1\
+current state: \{A2,C2,A3,A1,\},\{C3,C1,\},0\
+current state: \{C3,A2,A3,A1,\},\{C2,C1,\},0\
+current state: \{A2,C1,A3,A1,\},\{C3,C2,\},0\
+current state: \{C2,A2,\},\{A1,C3,A3,C1,\},1\
+current state: \{C3,A3,\},\{A1,C2,A2,C1,\},1\
+current state: \{A1,C1,\},\{C3,C2,A2,A3,\},1\
+current state: \{A1,C2,A2,C1,\},\{C3,A3,\},0\
+current state: \{C3,C2,A2,A3,\},\{C1,A1,\},0\
+current state: \{A1,C3,A3,C1,\},\{C2,A2,\},0\
+current state: \{C2,C1,\},\{C3,A2,A3,A1,\},1\
+current state: \{C3,C2,\},\{A3,A2,C1,A1,\},1\
+current state: \{C3,C1,\},\{A1,C2,A2,A3,\},1\
+current state: \{C3,C2,C1,\},\{A1,A2,A3,\},0\
+current state: \{C2,\},\{A1,C3,C1,A2,A3,\},1\
+current state: \{C1,\},\{A1,C3,C2,A2,A3,\},1\
+current state: \{C3,\},\{A1,C1,C2,A2,A3,\},1\
+current state: \{C3,C2,\},\{A3,A2,C1,A1,\},0\
+current state: \{C2,A2,\},\{A3,C3,C1,A1,\},0\
+current state: \{C2,C1,\},\{A3,C3,A2,A1,\},0\
+current state: \{A1,C1,\},\{C3,C2,A2,A3,\},0\
+current state: \{C3,C1,\},\{A3,C2,A2,A1,\},0\
+current state: \{C3,A3,\},\{A2,C2,C1,A1,\},0\
+goal state: \{\},\{A3,C1,C3,C2,A2,A1,\},1\
+Number of states visited: 36\
+}

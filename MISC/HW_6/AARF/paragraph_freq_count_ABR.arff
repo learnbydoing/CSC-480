@@ -1,0 +1,27 @@
+@relation bookauthor
+
+@attribute world real
+@attribute widow real
+@attribute earth real
+@attribute little real
+@attribute scarcely real
+@attribute bookauthor {austen,dickens,twain,wells}
+
+@data
+1,0,1,1,0,wells_abr
+1,0,2,0,2,wells_abr
+0,0,1,0,1,wells_abr
+0,0,0,0,1,wells_abr
+0,1,0,0,0,twain_abr
+0,2,0,0,0,twain_abr
+0,3,0,1,0,twain_abr
+0,0,0,0,0,twain_abr
+1,0,0,1,0,austen_abr
+0,0,0,1,0,austen_abr
+0,0,0,0,0,austen_abr
+0,0,0,1,0,austen_abr
+0,0,0,0,0,austen_abr
+0,0,0,0,0,dickens_abr
+0,0,0,0,0,dickens_abr
+0,0,0,0,0,dickens_abr
+0,0,0,0,0,dickens_abr

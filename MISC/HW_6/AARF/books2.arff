@@ -1,0 +1,58 @@
+@relation bookauthor
+
+@attribute widow {0,1}
+@attribute little {0,1}
+@attribute taylor {0,1}
+@attribute period {0,1}
+@attribute scarcely {0,1}
+@attribute earth {0,1}
+@attribute friend {0,1}
+@attribute people {0,1}
+@attribute indeed {0,1}
+@attribute polly {0,1}
+@attribute planet {0,1}
+@attribute sweat {0,1}
+@attribute world {0,1}
+@attribute matter {0,1}
+@attribute truth {0,1}
+@attribute couldn {0,1}
+@attribute water {0,1}
+@attribute governess {0,1}
+@attribute received {0,1}
+@attribute space {0,1}
+@attribute century {0,1}
+@attribute distance {0,1}
+@attribute money {0,1}
+@attribute france {0,1}
+@attribute human {0,1}
+@attribute barely {0,1}
+@attribute light {0,1}
+@attribute throne {0,1}
+@attribute direct {0,1}
+@attribute season {0,1}
+@attribute mainly {0,1}
+@attribute intelligences {0,1}
+@attribute woodman {0,1}
+@attribute microscope {0,1}
+@attribute mother {0,1}
+@attribute short {0,1}
+@attribute intellects {0,1}
+@attribute nineteenth {0,1}
+@attribute sister {0,1}
+@attribute robbers {0,1}
+@attribute thousand {0,1}
+@attribute temperature {0,1}
+@attribute farmer {0,1}
+@attribute father {0,1}
+@attribute winter {0,1}
+@attribute spiritual {0,1}
+@attribute passed {0,1}
+@attribute death {0,1}
+@attribute twentieth {0,1}
+@attribute times {0,1}
+@attribute bookauthor {austen_abr,dickens_abr,twain_abr,wells_abr}
+
+@data
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,austen_abr
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,austen_abr
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,twain_abr

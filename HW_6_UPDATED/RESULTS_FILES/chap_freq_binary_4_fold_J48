@@ -1,0 +1,79 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     bookauthor
+Instances:    230
+Attributes:   501
+              [list of attributes omitted]
+Test mode:    4-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+cylinder <= 0
+|   machine <= 0
+|   |   says: <= 0
+|   |   |   streets <= 0
+|   |   |   |   said: <= 0
+|   |   |   |   |   space <= 0
+|   |   |   |   |   |   outside <= 0
+|   |   |   |   |   |   |   darkness <= 0
+|   |   |   |   |   |   |   |   candle <= 0
+|   |   |   |   |   |   |   |   |   lightning <= 0
+|   |   |   |   |   |   |   |   |   |   roads <= 0: austen (77.0/4.0)
+|   |   |   |   |   |   |   |   |   |   roads > 0: dickens (4.0/1.0)
+|   |   |   |   |   |   |   |   |   lightning > 0: twain (2.0)
+|   |   |   |   |   |   |   |   candle > 0
+|   |   |   |   |   |   |   |   |   trees <= 0: dickens (2.0)
+|   |   |   |   |   |   |   |   |   trees > 0: twain (2.0)
+|   |   |   |   |   |   |   darkness > 0: dickens (3.0/1.0)
+|   |   |   |   |   |   outside > 0: dickens (8.0/1.0)
+|   |   |   |   |   space > 0: wells (3.0/1.0)
+|   |   |   |   said: > 0: twain (29.0)
+|   |   |   streets > 0
+|   |   |   |   visit <= 0: dickens (32.0)
+|   |   |   |   visit > 0: austen (2.0/1.0)
+|   |   says: > 0: twain (39.0)
+|   machine > 0
+|   |   spirit <= 0: wells (6.0)
+|   |   spirit > 0: dickens (2.0/1.0)
+cylinder > 0: wells (19.0/2.0)
+
+Number of Leaves  : 	15
+
+Size of the tree : 	29
+
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         189               82.1739 %
+Incorrectly Classified Instances        41               17.8261 %
+Kappa statistic                          0.7517
+Mean absolute error                      0.0983
+Root mean squared error                  0.2855
+Relative absolute error                 27.3755 %
+Root relative squared error             67.39   %
+Total Number of Instances              230     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.853    0.116    0.780      0.853    0.815      0.722    0.884     0.742     austen
+                 0.740    0.061    0.771      0.740    0.755      0.689    0.831     0.647     dickens
+                 0.859    0.033    0.931      0.859    0.893      0.843    0.909     0.867     twain
+                 0.778    0.034    0.750      0.778    0.764      0.732    0.905     0.701     wells
+Weighted Avg.    0.822    0.066    0.826      0.822    0.823      0.757    0.884     0.759     
+
+=== Confusion Matrix ===
+
+  a  b  c  d   <-- classified as
+ 64  7  2  2 |  a = austen
+  8 37  2  3 |  b = dickens
+  6  3 67  2 |  c = twain
+  4  1  1 21 |  d = wells
+
